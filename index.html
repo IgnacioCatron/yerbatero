@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantas Medicinales</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+    <h1>Plantas Medicinales</h1>
+       <p>Es importante recordar que el uso de plantas medicinales debe ser responsable y complementario a otros tratamientos. Siempre consulte con un médico antes de comenzar cualquier terapia con plantas medicinales, especialmente si tiene dudas o condiciones de salud preexistentes. El consejo profesional garantizará un uso seguro y adecuado.
+    </p>
+    <label for="dolencia">Selecciona una dolencia:</label>
+    <select id="dolencia" onchange="updatePlants()">
+        <option value="">--Seleccione una dolencia--</option>
+        <option value="dolorCabeza">Dolor de Cabeza</option>
+        <option value="ansiedad">Ansiedad</option>
+        <option value="digestión">Problemas Digestivos</option>
+        <option value="insomnio">Insomnio</option>
+        <option value="resfriado">Resfriado Común</option>
+        <option value="dolorMuscular">Dolor Muscular</option>
+        <option value="estrés">Estrés</option>
+        <option value="inflamación">Inlfamación</option>
+        <option value="tos">Tos</option>
+    </select>
+    
+    <br><br>
+    
+    <ul id="plantas-list">
+        <!-- Plantas medicinales se mostrarán aquí -->
+    </ul>
+
+    </div>
+
+    
+    <div data-aos="flip-left" data-aos data-aos-duration="3000"  id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="plant-title"></h2>
+            <img id="plant-image" src="" alt="Imagen de la Planta">
+            <p id="plant-info"></p>
+            <h3>Modos de Preparación</h3>
+            <p id="plant-preparation"></p>
+            <h3>Precauciones</h3>
+            <p id="plant-precautions"></p>
+        </div>
+    </div>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
